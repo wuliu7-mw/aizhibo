@@ -9,7 +9,6 @@
   --bg-mid: #10403c;
   --coral: #e8735a;
   --coral-light: #ff9a76;
-  --teal: #0f766e;
   --sand: #ffd9a0;
   --text-1: #f4f9f7;
   --text-2: rgba(244, 249, 247, 0.65);
@@ -17,7 +16,6 @@
   --glass-bg-strong: rgba(255, 255, 255, 0.12);
   --glass-border: rgba(255, 255, 255, 0.18);
   --radius-l: 20px;
-  --radius-m: 14px;
   --font-cn: "PingFang SC", "HarmonyOS Sans SC", "Source Han Sans SC",
     "Microsoft YaHei", sans-serif;
   --font-en: "Outfit", var(--font-cn);
@@ -246,7 +244,8 @@ section[id] {
 }
 
 .btn-sm {
-  padding: 9px 22px;
+  /* 13px 垂直内边距保证触控目标 ≥44px（规格 §6） */
+  padding: 13px 22px;
   font-size: 14px;
 }
 

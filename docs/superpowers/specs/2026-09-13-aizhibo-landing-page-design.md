@@ -88,7 +88,7 @@ aizhibo/
 
 - 首屏加载编排：标题 → 副标题 → CTA → 手机 mockup 依次渐入上浮（staggered `animation-delay`）。
 - 滚动渐入：各区块 IntersectionObserver 触发 `.reveal`，一次性不回退。
-- `prefers-reduced-motion: reduce`：关闭所有动画与过渡（声波静止、元素直接可见）。
+- `prefers-reduced-motion: reduce`：关闭所有动画与过渡（声波整体隐藏以避免任何位移动画、元素直接可见）。
 - 对比度：正文文字在基底色上满足 WCAG AA（≥4.5:1）；半透明文字不得低于 60% 不透明度。
 - 语义化：单 `h1`（Hero）、区块用 `section` + `h2`；链接/按钮真实可聚焦；触控目标 ≥ 44×44px。
 
