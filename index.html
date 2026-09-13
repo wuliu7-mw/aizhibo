@@ -4,12 +4,242 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>爱智播 · 会说话的直播间</title>
+  <meta name="description" content="爱智播——AI 直播语音助手。文案轮播、评论秒答、弹幕欢迎、自动报时，AI 替你说话，主播只管安心出镜。" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
-  <main class="container">
-    <h1>爱智播</h1>
-    <p>脚手架占位页 —— Task 2 替换为完整内容</p>
+
+  <!-- ① 导航 -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#top" aria-label="爱智播首页">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0F766E" /><stop offset="1" stop-color="#E8735A" />
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="14" fill="url(#lg)" />
+          <g fill="#F4F9F7">
+            <rect x="16" y="26" width="5" height="12" rx="2.5" />
+            <rect x="25" y="18" width="5" height="28" rx="2.5" />
+            <rect x="34" y="24" width="5" height="16" rx="2.5" />
+            <rect x="43" y="29" width="5" height="6" rx="2.5" />
+          </g>
+        </svg>
+        <span class="logo-name">爱智播</span>
+        <span class="logo-en">AIZHIBO</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#features">功能</a>
+        <a href="#scenes">场景</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="#download">下载 App</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ② Hero -->
+    <section class="hero">
+      <div class="waves" aria-hidden="true">
+        <svg class="wave wave-1" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,64 C240,96 480,32 720,64 C960,96 1200,32 1440,64 L1440,120 L0,120 Z" />
+        </svg>
+        <svg class="wave wave-2" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,64 C240,96 480,32 720,64 C960,96 1200,32 1440,64 L1440,120 L0,120 Z" />
+        </svg>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow fx fx-1">AI 直播语音助手</p>
+          <h1 class="fx fx-2">会说话的直播间，<br /><span class="grad">从此热气腾腾</span></h1>
+          <p class="hero-sub fx fx-3">AI 替你欢迎观众、回答评论、报时促单，主播只管安心出镜。</p>
+          <div class="hero-cta fx fx-4">
+            <a class="btn btn-primary" href="#download">下载 Android 版</a>
+            <a class="btn btn-ghost" href="#download">鸿蒙版 · 开发中</a>
+          </div>
+          <p class="hero-note fx fx-4">支持 Android 7.0 及以上 · 鸿蒙版开发中</p>
+        </div>
+        <div class="hero-visual fx fx-4">
+          <div class="phone" role="img" aria-label="爱智播 App 播报演示：欢迎观众、回答评论、整点报时">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-title">正在直播 · 场次 0913-02</div>
+              <div class="bubble b1">🎤 欢迎新朋友「小鹿」来到直播间～</div>
+              <div class="bubble b2">💬 “多少钱？” → 现在下单立减 20 哦！</div>
+              <div class="bubble b3">⏰ 现在是下午 3 点半，福利马上来！</div>
+              <svg class="phone-wave" viewBox="0 0 120 28" aria-hidden="true">
+                <rect x="4"   y="9"  width="4" height="10" rx="2" />
+                <rect x="14"  y="5"  width="4" height="18" rx="2" />
+                <rect x="24"  y="11" width="4" height="6"  rx="2" />
+                <rect x="34"  y="3"  width="4" height="22" rx="2" />
+                <rect x="44"  y="8"  width="4" height="12" rx="2" />
+                <rect x="54"  y="13" width="4" height="2"  rx="1" />
+                <rect x="64"  y="6"  width="4" height="16" rx="2" />
+                <rect x="74"  y="10" width="4" height="8"  rx="2" />
+                <rect x="84"  y="4"  width="4" height="20" rx="2" />
+                <rect x="94"  y="12" width="4" height="4"  rx="2" />
+                <rect x="104" y="7"  width="4" height="14" rx="2" />
+                <rect x="114" y="11" width="4" height="6"  rx="2" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 能力信任条 -->
+    <section class="trustbar">
+      <div class="container">
+        <ul class="trust-list">
+          <li>双引擎语音</li>
+          <li>离线可用</li>
+          <li>抖音 / 快手 / 小红书</li>
+          <li>多账号隔离</li>
+          <li>悬浮控制台</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ④ 核心功能 -->
+    <section class="section features" id="features">
+      <div class="container">
+        <p class="label reveal">核心功能</p>
+        <h2 class="section-title reveal">一个助手，撑起整场直播</h2>
+        <div class="grid grid-3">
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4M21 6H8a5 5 0 0 0-5 5M7 22l-4-4 4-4M3 18h13a5 5 0 0 0 5-5" /></svg>
+            </div>
+            <h3>文案轮播</h3>
+            <p>主文案配多条变体随机播报，支持暂停续播，话术永远不重样。</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H4l2.5-2.5A8 8 0 1 1 21 12z" /><path d="M9 11h6M9 14h4" /></svg>
+            </div>
+            <h3>评论秒答</h3>
+            <p>自动读取直播间评论，关键词命中问答库，瞬间语音回复“多少钱”“怎么拍”。</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></svg>
+            </div>
+            <h3>弹幕欢迎 + 自动报时</h3>
+            <p>定时随机模板欢迎新观众、播报时间，直播间永远有人气。</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /><path d="M19 16l.9 2.6L22.5 19.5l-2.6.9L19 23l-.9-2.6-2.6-.9 2.6-.9z" /></svg>
+            </div>
+            <h3>AI 话术润色</h3>
+            <p>一键润色、扩写，批量生成多条变体，话术库自动保鲜。</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 10v4M8 6v12M12 3v18M16 8v8M20 10v4" /></svg>
+            </div>
+            <h3>双引擎语音</h3>
+            <p>本机语音免费离线即开即用；增强引擎多音色，更像真人。</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><rect x="12" y="11" width="7" height="6" rx="1" /></svg>
+            </div>
+            <h3>悬浮控制台</h3>
+            <p>悬浮窗实时显示直播时长，一键暂停、停止，随时人工接管。</p>
+          </article>
+        </div>
+        <p class="features-more reveal">还有：多账号数据隔离 · TTS 本地缓存 · 场次化直播日志 · 音色远端下发与试听</p>
+      </div>
+    </section>
+
+    <!-- ⑤ 使用场景 -->
+    <section class="section scenes" id="scenes">
+      <div class="container">
+        <p class="label reveal">使用场景</p>
+        <h2 class="section-title reveal">哪里有直播间，哪里用得上</h2>
+        <div class="grid grid-3">
+          <article class="card scene reveal">
+            <div class="scene-emoji" aria-hidden="true">🛍️</div>
+            <h3>电商带货</h3>
+            <p>促单话术轮播不停，价格问题秒回，人流高峰也接得住。</p>
+          </article>
+          <article class="card scene reveal">
+            <div class="scene-emoji" aria-hidden="true">🎤</div>
+            <h3>才艺主播</h3>
+            <p>唱歌跳舞时让 AI 替你欢迎观众、报时互动，专心表演不打断。</p>
+          </article>
+          <article class="card scene reveal">
+            <div class="scene-emoji" aria-hidden="true">📊</div>
+            <h3>团队运营</h3>
+            <p>多账号数据隔离，文案问答统一管理，一键同步全部主播间。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑥ 下载 -->
+    <section class="section download" id="download">
+      <div class="container">
+        <p class="label reveal">获取爱智播</p>
+        <h2 class="section-title reveal">现在，把话筒交给 AI</h2>
+        <div class="dl-grid">
+          <article class="card dl-card dl-android reveal">
+            <div class="dl-head">
+              <h3>Android APK</h3>
+              <span class="badge">内测版</span>
+            </div>
+            <p>适用于 Android 7.0 及以上的大部分手机。</p>
+            <!-- TODO: APK 链接占位 —— 上线后替换为真实下载地址（如 GitHub Releases） -->
+            <a class="btn btn-primary dl-btn" href="#">下载 APK</a>
+          </article>
+          <article class="card dl-card dl-harmony reveal">
+            <div class="dl-head">
+              <h3>HarmonyOS</h3>
+              <span class="badge badge-muted">开发中</span>
+            </div>
+            <p>鸿蒙原生版本正在打磨，敬请期待。</p>
+            <span class="dl-disabled-btn" aria-disabled="true">鸿蒙版即将上线</span>
+          </article>
+        </div>
+        <p class="dl-note reveal">※ 需配合爱智播管理端账号使用</p>
+      </div>
+    </section>
+
+    <!-- ⑦ 联系方式 -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <p class="label reveal">联系我们</p>
+        <h2 class="section-title reveal">聊聊你的直播间</h2>
+        <div class="contact-grid">
+          <div class="card contact-item reveal">
+            <h3>商务合作</h3>
+            <p>试用、采购与团队版咨询：</p>
+            <!-- TODO: 邮箱占位 —— 替换为真实邮箱 -->
+            <a href="mailto:hello@aizhibo.example">hello@aizhibo.example</a>
+          </div>
+          <div class="card contact-item reveal">
+            <h3>微信交流</h3>
+            <!-- TODO: 二维码占位 —— 在 public/ 放入真实二维码图后替换此占位框 -->
+            <div class="qr-placeholder">微信二维码<br />占位</div>
+            <p class="qr-tip">扫码添加，备注「爱智播」</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- ⑧ 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> 爱智播 · 让直播间会说话</p>
+    </div>
+  </footer>
 </body>
 </html>
