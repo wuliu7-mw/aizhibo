@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 
-// 部署在 https://wuliu7-mw.github.io/aizhibo/ 子路径下，base 必须与仓库名一致
+// 自定义域名根路径部署（https://home.heheland.ccwu.cc/），base 保持默认 /
 export default defineConfig({
-  base: '/aizhibo/',
+  base: '/',
 })

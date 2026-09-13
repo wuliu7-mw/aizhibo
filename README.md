@@ -1,11 +1,11 @@
 # 爱智播 · 官网
 
-「爱智播」AI 直播语音助手的产品宣传单页。线上地址：<https://wuliu7-mw.github.io/aizhibo/>
+「爱智播」AI 直播语音助手的产品宣传单页。线上地址：<https://home.heheland.ccwu.cc/>
 
 ## 技术
 
 - Vite 7 静态站（无框架），单页 `index.html` + `src/style.css` + `src/main.js`
-- 部署在 GitHub Pages 子路径 `/aizhibo/`（`vite.config.js` 的 `base` 与仓库名一致）
+- 自定义域名 `home.heheland.ccwu.cc` 根路径部署（`public/CNAME` + GitHub Pages 设置）
 
 ## 本地开发
 
@@ -18,8 +18,12 @@ npm run preview  # 本地预览构建产物
 
 ## 部署
 
-push 到 `main` 即自动构建并部署（`.github/workflows/deploy.yml`，仅页面源文件变更时触发）。
-首次使用需在仓库 **Settings → Pages → Source 选 "GitHub Actions"**（一次性手动设置）。
+push 到 `main` 即自动构建并部署（`.github/workflows/deploy.yml`，仅页面源文件变更时触发；支持 Actions 页手动 Run workflow）。
+
+自定义域名（一次性配置）：
+1. Cloudflare DNS 添加：`CNAME` · `home` · `wuliu7-mw.github.io` · **仅 DNS（灰云）**
+2. 仓库 **Settings → Pages → Custom domain** 填 `home.heheland.ccwu.cc` → Save
+3. DNS 校验通过后勾选 **Enforce HTTPS**
 
 ## 占位替换清单
 
