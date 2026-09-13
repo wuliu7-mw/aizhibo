@@ -1,5 +1,9 @@
 import './style.css'
 
+// JS 可用时才标记：.reveal 的初始隐藏态仅在 <html class="js"> 下生效，
+// 保证无 JS / JS 失败时内容仍然完整可见（渐进增强）
+document.documentElement.classList.add('js')
+
 // ---- 页脚年份自动更新 ----
 document.getElementById('year').textContent = new Date().getFullYear()
 

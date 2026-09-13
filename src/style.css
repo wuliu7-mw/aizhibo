@@ -40,14 +40,23 @@ body {
   font-family: var(--font-cn);
   color: var(--text-1);
   line-height: 1.7;
+  /* 兜底底色（渐变氛围层在其上，见 body::after） */
+  background: linear-gradient(165deg, var(--bg-deep) 0%, var(--bg-mid) 100%);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* 暮色氛围层：fixed 保证滚动时零重排（替代性能差的 background-attachment: fixed） */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background:
     radial-gradient(90% 60% at 85% -5%, rgba(232, 115, 90, 0.28), transparent 60%),
     radial-gradient(70% 55% at -10% 30%, rgba(15, 118, 110, 0.4), transparent 60%),
-    radial-gradient(80% 60% at 70% 105%, rgba(232, 115, 90, 0.16), transparent 55%),
-    linear-gradient(165deg, var(--bg-deep) 0%, var(--bg-mid) 100%);
-  background-attachment: fixed;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+    radial-gradient(80% 60% at 70% 105%, rgba(232, 115, 90, 0.16), transparent 55%);
+  pointer-events: none;
 }
 
 /* 噪点纹理：增加暮色氛围 */
@@ -676,13 +685,14 @@ section[id] {
    Task 6: 滚动渐入 + 减少动态效果降级
    ============================================================ */
 
-.reveal {
+/* 初始隐藏仅在 JS 可用时生效（渐进增强，无 JS 时内容直接可见） */
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
