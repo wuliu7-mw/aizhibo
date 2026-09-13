@@ -565,3 +565,109 @@ section[id] {
   border: 1px solid var(--glass-border);
   margin-bottom: 16px;
 }
+
+/* ============================================================
+   Task 5: 下载区 / 联系方式 / 页脚
+   ============================================================ */
+
+/* ---- 下载区 ---- */
+.dl-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 760px;
+}
+
+.dl-card .dl-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: var(--sand);
+  background: rgba(255, 154, 118, 0.18);
+  border: 1px solid rgba(255, 154, 118, 0.4);
+}
+
+.badge-muted {
+  color: var(--text-2);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--glass-border);
+}
+
+.dl-card p {
+  margin-bottom: 22px;
+}
+
+.dl-android {
+  border-color: rgba(255, 154, 118, 0.5);
+  background: linear-gradient(160deg, rgba(255, 154, 118, 0.14), rgba(255, 255, 255, 0.05));
+}
+
+/* 鸿蒙：置灰不可点（规格 §4-⑥） */
+.dl-harmony {
+  opacity: 0.62;
+}
+
+.dl-disabled-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1px dashed var(--glass-border);
+  color: var(--text-2);
+  font-size: 14px;
+  cursor: not-allowed;
+}
+
+.dl-note {
+  margin-top: 26px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+/* ---- 联系方式 ---- */
+.contact-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 760px;
+}
+
+.contact-item a {
+  color: var(--sand);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  word-break: break-all;
+}
+
+.qr-placeholder {
+  width: 132px;
+  height: 132px;
+  border: 1.5px dashed var(--glass-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-2);
+  margin: 14px 0 10px;
+}
+
+.qr-tip {
+  font-size: 12.5px;
+}
+
+/* ---- 页脚 ---- */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 36px 0 44px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-2);
+}
