@@ -1,0 +1,6 @@
+# Brainstorm visual companion session files
+.superpowers/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
